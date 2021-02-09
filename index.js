@@ -12,7 +12,7 @@ const FileSync = require('lowdb/adapters/FileSync')
 const adapter = new FileSync('db.json')
 const db = low(adapter)
 
-db.defaults({ messages: []})
+db.defaults({ messages: [], finalPhrases: []})
 	.write()
 
 // Express
@@ -36,27 +36,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 const responsePhrase = "Merci de t'être confessé mon enfant !";
-const finalPhrase = [
-	"Alors là, je suis choqué.",
-	"Heureusement que c'est anonyme.",
-	"C'est quand même la honte, je comprends que ce soit anonymes.",
-	"T'inquiète personne ne va te juger.",
-	"Ha ba d'accord si tu veux, on te juge pas hein.",
-	"On va faire comme si on avait rien vu.",
-	"Bon dit comme ça, ça change tout.",
-	"Je sais que c'est anonyme, mais quand même, il y a des limites...",
-	"Sheryfa Luna disait qu'il avait les mots, mais moi, je ne les ai plus devant cette confession.",
-	"Du haut de mes lignes de code, je suis bouche-bée.",
-	"Ptdr t ki ?",
-	"Parfois j'aimerais être à votre place... Euh non, en fait non.",
-	"On est dans le partage, mais ça, faut pas le partager.",
-	"Cristina dirait que 'ça va pas di touuut ma chéwiiie !'",
-	"L'oscar de la honte te revient, malheureusement",
-	"OHHHH, MYYY, GOOODD (Janice tmtc)",
-	"T'en as pas marre de me raconter ta vie ?",
-	"Ohh mais y a pire, non ?",
-	"Malgré ça, comme disait Renaud, t'as toujours la banane et t'es toujours debout."
-]
+const finalPhrase = db.get('finalPhrases').value();
 
 client.on('ready', () => {
   	console.log(`Logged in as ${client.user.tag}!`);
