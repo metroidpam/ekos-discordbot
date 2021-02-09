@@ -10,8 +10,8 @@ npm install
 node index.js ou npm start
 ```
 
-Afin d'executer le bot sur à partir de docker : 
-```
+Afin d'executer le bot à partir d'un conteneur docker : 
+```Dockerfile
 FROM node:14
 WORKDIR /usr/src/app
 COPY package*.json ./
