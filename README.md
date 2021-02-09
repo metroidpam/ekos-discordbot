@@ -11,6 +11,7 @@ node index.js ou npm start
 ```
 
 Afin d'executer le bot à partir d'un conteneur docker : 
+
 Dockerfile
 ```Dockerfile
 FROM node:14
@@ -26,3 +27,11 @@ Commande pour build :
 ```
 docker build -t votrepseudo/nomduconteneur
 ```
+
+TO-DO LIST
+- [x] Envoi du message anonyme
+- [ ] Envoi réponse au mp
+- [x] Log du message pour faciliter l'administration en cas de problème
+- [ ] API
+  - [x] Accès aux logs
+  - [ ] Ajout de phrase finale
