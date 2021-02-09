@@ -11,6 +11,7 @@ node index.js ou npm start
 ```
 
 Afin d'executer le bot à partir d'un conteneur docker : 
+Dockerfile
 ```Dockerfile
 FROM node:14
 WORKDIR /usr/src/app
@@ -20,4 +21,8 @@ COPY . .
 EXPOSE 80
 EXPOSE 443
 CMD [ "node", "index.js" ]
+```
+Commande pour build :
+```
+docker build -t votrepseudo/nomduconteneur
 ```
