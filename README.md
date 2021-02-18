@@ -15,9 +15,12 @@ TO-DO LIST
   - [ ] Ajout de phrase finale
 
 
-Afin d'éxecuter le bot de manière normale : 
+A la première execution : 
 ```
 npm install
+```
+Pour démarrer le script après ça : 
+```
 node index.js ou npm start
 ```
 
