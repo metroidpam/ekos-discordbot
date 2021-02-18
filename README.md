@@ -14,7 +14,7 @@ TO-DO LIST
   - [x] Accès aux logs
   - [ ] Ajout de phrase finale
 
-
+## Pour l'executer de manière native :
 A la première execution : 
 ```
 npm install
@@ -24,8 +24,7 @@ Pour démarrer le script après ça :
 node index.js ou npm start
 ```
 
-Afin d'executer le bot à partir d'un conteneur docker : 
-
+## Pour l'executer à partir d'un conteneur docker : 
 Dockerfile
 ```Dockerfile
 FROM node:14
