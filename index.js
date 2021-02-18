@@ -43,11 +43,14 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-	if(msg.channel.type == "dm") {
-		client.channels.cache.get(channelId).send(customise(msg.content))
-		db.get('messages')
-			.push({user:msg.author.username, id:msg.author.id, msg:msg.content})
-			.write();
+	if(msg.channel.type == "dm" && msg.author.id !== client.user.id) {
+		if(msg.attachments.array().length == 0 && msg.content.length !== 0) {
+			client.channels.cache.get(channelId).send(customise(msg.content))
+			db.get('messages').push({user:msg.author.username, id:msg.author.id, msg:msg.content}).write();
+			msg.reply(responsePhrase);
+		} else {
+			msg.reply("Votre message ne dois pas contenir d'image ou de média.")
+		}	
 	}
 });
 
