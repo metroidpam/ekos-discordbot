@@ -1,6 +1,7 @@
-Bot discord fait pour ekos nancy.
+Bot discord de l'association ekos nancy.
+La partie data ainsi que les tokens de sécurité sont manquants. 
 
-Fonctionnalités : 
+## Fonctionnalités : 
 Confessionnal :
 > Envoyer des messages de manière anonyme dans un channel prédéfini.
 
