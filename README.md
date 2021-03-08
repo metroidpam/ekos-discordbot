@@ -1,18 +1,14 @@
 Bot discord fait pour ekos nancy.
 
-Ce bot permet de publier des messages de manière anonyme dans un channel spécifique (désigné par son identifiant).
+Fonctionnalités : 
+Confessionnal :
+> Envoyer des messages de manière anonyme dans un channel prédéfini.
 
-Les messages sont stockés sur une base de donnée en JSON et accessibles depuis un lien web (http://ipserver:19213/api/discordbot/clef).
+Interro-surprise :
+> Chaque jours à 10h, une question aléatoire sera posée à une personne aléatoire présente sur le serveur
 
-TO-DO LIST
-- [x] Envoi du message anonyme
-- [ ] Envoi réponse au mp
-- [ ] Gestion de la config
-- [ ] Gestion multichannel/multiserver
-- [x] Log du message pour faciliter l'administration en cas de problème
-- [ ] API
-  - [x] Accès aux logs
-  - [ ] Ajout de phrase finale
+Memes :
+> Chaque jours à 17h, un meme tiré du site "lesjoiesducode.fr" sera publié avec son titre et son gif ([webscrapper dispo ici](https://github.com/metroidpam/webscrap-Lesjoiesducode))
 
 ## Pour l'executer de manière native :
 A la première execution : 
