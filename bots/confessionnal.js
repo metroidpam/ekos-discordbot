@@ -14,7 +14,7 @@ class Confessionnal {
         const responsePhrase = "Merci de t'être confessé mon enfant !";
         const finalPhrase = db.get('finalPhrases').value();
 
-        express.get('/api/discordbot/:1/logs', (req, res) => {
+        express.get('/api/:1/confessionnal/logs', (req, res) => {
             if(req.params.length !== 0 && req.params[1] == key) {
                 res.send(db.get('messages').value())
             } else {
@@ -22,7 +22,7 @@ class Confessionnal {
             }
         })
         
-        express.get('/api/discordbot/:1/finalPhrases', (req, res) => {
+        express.get('/api/:1/confessionnal/finalPhrases', (req, res) => {
             if(req.params.length !== 0 && req.params[1] == key) {
                 res.send(db.get('finalPhrases').value())
             } else {

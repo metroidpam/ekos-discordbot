@@ -1,0 +1,20 @@
+body {
+    background:  #282a36;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Lato, sans-serif;
+}
+
+input {
+    text-align: center;
+}
+
+.label {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}

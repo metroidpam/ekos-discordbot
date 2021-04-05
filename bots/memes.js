@@ -1,4 +1,5 @@
 const schedule = require('node-schedule');
+const serverId = '808622535259848734';
 const channelId = '808627297820999760';
 
 class Memes {
